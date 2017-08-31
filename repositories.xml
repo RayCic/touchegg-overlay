@@ -4,12 +4,12 @@
 		<name>touchegg-overlay</name>
 		<description lang="en">touchegg-overlay</description>
 		<longdescription lang="en">touchegg related apps</longdescription>
-		<homepage>https://github.com/dkuku/touchegg-overlay</homepage>
+		<homepage>https://github.com/RayCic/touchegg-overlay</homepage>
 		<owner type="person">
-			<email>daniel.kuku@gmail.com</email>
-			<name>Daniel Kukula</name>
+			<email>ray@apollo.lv</email>
+			<name>Raimonds Cicans</name>
 		</owner>
-		<source type="git">git://github.com/dkuku/touchegg-overlay.git</source>
-		<source type="git">git+ssh://git@github.com:dkuku/touchegg-overlay.git</source>
+		<source type="git">git://github.com/RayCic/touchegg-overlay.git</source>
+		<source type="git">git+ssh://git@github.com:RayCic/touchegg-overlay.git</source>
 	</repo>
 </repositories>
