@@ -1,21 +1,13 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
+EAPI=6
+
 DESCRIPTION="Event Emulation for the uTouch Stack"
-SRC_URI="http://launchpad.net/evemu/trunk/evemu-${PV}/+download/evemu-${PV}.tar.gz"
+SRC_URI="https://launchpad.net/evemu/trunk/${P}/+download/${P}.tar.xz"
 HOMEPAGE="https://launchpad.net/evemu"
+
 KEYWORDS="~x86 ~amd64"
-SLOT="0" 
-LICENSE="GPL-3"
-IUSE=""
-
-src_compile() {
-    econf
-    emake || die
-}
-
-src_install() {
-    emake DESTDIR="${D}" install || die
-
-}
+SLOT="0"
+LICENSE="LGPL-3"
