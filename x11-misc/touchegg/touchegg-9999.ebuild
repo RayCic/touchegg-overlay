@@ -15,7 +15,6 @@ SLOT="0"
 KEYWORDS=""
 
 RDEPEND="x11-libs/libX11
-	x11-libs/libXext
 	x11-libs/libXtst
 	dev-qt/qtcore:4
 	dev-qt/qtgui:4
