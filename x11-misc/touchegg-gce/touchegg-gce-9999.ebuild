@@ -4,23 +4,21 @@
 
 EAPI=5
 
-inherit qt4-r2
+inherit qt4-r2 git-r3
 
 DESCRIPTION="GUI for multitouch gesture recognizer"
 HOMEPAGE="https://github.com/Raffarti/Touchegg-gce"
-SRC_URI="https://github.com/Raffarti/Touchegg-gce/archive/${PV}.tar.gz -> ${P}.tar.gz"
+EGIT_REPO_URI="https://github.com/Raffarti/Touchegg-gce.git"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS=""
 
 DEPEND="x11-libs/libX11
 	dev-qt/qtcore:4
 	dev-qt/qtgui:4"
 RDEPEND="${DEPEND}
 	x11-misc/touchegg"
-
-S="${WORKDIR}/Touchegg-gce-${PV}/"
 
 src_configure() {
 	eqmake4 PREFIX="${EPREFIX}/usr" CONFIG_PATH="${EPREFIX}/etc"

@@ -21,5 +21,3 @@ RDEPEND="x11-libs/libX11
 	dev-qt/qtgui:4
 	x11-libs/geis"
 DEPEND="${RDEPEND}"
-
-#S="${WORKDIR}/${P}/touchegg/"
