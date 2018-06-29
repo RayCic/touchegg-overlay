@@ -1,0 +1,22 @@
+diff -ur touchegg-gui.old/src/touchegg-gui/util/Include.h touchegg-gui.new/src/touchegg-gui/util/Include.h
+--- touchegg-gui.old/src/touchegg-gui/util/Include.h	2014-03-15 22:31:16.000000000 +0200
++++ touchegg-gui.new/src/touchegg-gui/util/Include.h	2018-06-29 19:39:27.674152353 +0300
+@@ -16,6 +16,7 @@
+ 
+     #include <QtCore>
+     #include <QtGui>
++    #include <QtWidgets>
+     #include <QtXml>
+ 
+ #endif // INCLUDE_H
+diff -ur touchegg-gui.old/touchegg-gui.pro touchegg-gui.new/touchegg-gui.pro
+--- touchegg-gui.old/touchegg-gui.pro	2014-03-15 22:31:16.000000000 +0200
++++ touchegg-gui.new/touchegg-gui.pro	2018-06-29 19:39:59.807178879 +0300
+@@ -1,6 +1,6 @@
+ TEMPLATE        = app
+ TARGET          = touchegg-gui
+-QT             += core gui xml
++QT             += core gui xml widgets
+ OBJECTS_DIR    += build
+ MOC_DIR        += build
+ RCC_DIR        += build

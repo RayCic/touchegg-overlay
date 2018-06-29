@@ -1,6 +1,5 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: $
 
 EAPI=6
 
@@ -26,7 +25,7 @@ DEPEND="x11-libs/frame
 RDEPEND="${DEPEND}
 	${PYTHON_DEPS}"
 
-PATCHES=( "${FILESDIR}/${P}-gcc6.patch" )
+PATCHES=( "${FILESDIR}/${P}-gcc6.patch" "${FILESDIR}/${P}-gcc7.patch" )
 
 src_prepare() {
 	default

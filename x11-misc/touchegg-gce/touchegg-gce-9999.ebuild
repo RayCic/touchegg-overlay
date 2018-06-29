@@ -1,10 +1,9 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: $
 
-EAPI=5
+EAPI=6
 
-inherit qt4-r2 git-r3
+inherit qmake-utils git-r3
 
 DESCRIPTION="GUI for multitouch gesture recognizer"
 HOMEPAGE="https://github.com/Raffarti/Touchegg-gce"
@@ -15,11 +14,20 @@ SLOT="0"
 KEYWORDS=""
 
 DEPEND="x11-libs/libX11
-	dev-qt/qtcore:4
-	dev-qt/qtgui:4"
+	dev-qt/qtcore:5
+	dev-qt/qtgui:5"
 RDEPEND="${DEPEND}
 	x11-misc/touchegg"
 
+DOCS=( "Changelog" "README" )
+
 src_configure() {
-	eqmake4 PREFIX="${EPREFIX}/usr" CONFIG_PATH="${EPREFIX}/etc"
+	eqmake5 PREFIX="${EPREFIX}/usr" CONFIG_PATH="${EPREFIX}/etc"
+}
+
+src_install() {
+	# default attempts to install directly to /usr
+	emake INSTALL_ROOT="${D}" install || die
+
+	einstalldocs
 }
